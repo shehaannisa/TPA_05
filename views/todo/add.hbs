@@ -1,0 +1,23 @@
+<div class="card card-body">
+        {{#if message}}
+            <div class="alert {{messageClass}}" role="alert">
+                {{message}}
+            </div>
+        {{/if}}
+  <h3>Add - Todo - List</h3>
+  <form action="/todo" method="post">
+    <div class="form-group">
+      <label for="title">Kegiatan / Task</label>
+      <input class="form-control" name="title" type="text" placeholder="Belajar Node JS" required>
+    </div>
+    <div class="form-group">
+      <label for="descTask">Deskripsi Kegiatan</label>
+      <textarea class="form-control" name="descTask" type="text" placeholder="Deskripsi Task Anda" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="dueDate">Deadline</label>
+      <input class="form-control" name="dueDate" type="text" placeholder="1 Jul 2022" required>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+<h2>List Kegiatan / Task : </h2>
+<a class="btn btn-info mb-3" href="/todo/add" >Tambah Kegiatan</a>
+<a class="btn btn-danger mb-3" href="/todo/deleteAll" type="submit" >Delete Semua Task</a>
+
+{{#if todos.length}}
+    <ul>
+    {{#each todos}}
+        <div class="card card-body mb-2">
+            <h4>{{title}}</h4>
+            <p>Deadline : {{dueDate}}</p>
+            <p>Ditambahkan pada {{time}}</p>
+            <div class="d-flex text-nowrap">
+                <a class="btn btn-secondary mb-2" href="/todo/edit/{{_id}}">Edit Task</a>
+            <form action="/todo/detail/{{_id}}" method="POST">
+                <input type="hidden" value="{{ _id }}" name="id">
+                <button class="btn btn-success mb-2 ml-2" type="submit">Detail Task</button>
+            </form>
+            <form action="/todo/delete" method="POST">
+                <input type="hidden" value="{{_id}}" name="id">
+                <button class="btn btn-danger mb-2 ml-2" type="submit">Hapus Task</button>
+            </form>
+            </div>
+        </div>
+    {{/each}}
+    </ul>
+{{else}}
+    <p>Belum ada Task!</p>
+{{/if}}

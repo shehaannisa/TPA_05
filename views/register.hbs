@@ -1,0 +1,40 @@
+<div class="row justify-content-md-center" style="margin-top: 30px">
+    <div class="col-md-4">
+
+        {{#if message}}
+            <div class="alert {{messageClass}}" role="alert">
+                {{message}}
+            </div>
+        {{/if}}
+
+        <form method="POST" action="/users/register">
+            <div class="form-group">
+                <label for="nameInput">Nama</label>
+                <input name="name" type="text" class="form-control" id="nameInput" placeholder="Masukkan nama" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emailInput">Alamat Email</label>
+                <input name="email" type="email" class="form-control" id="emailInput" placeholder="Masukkan email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="passwordInput">Password</label>
+                <input name="password" type="password" class="form-control" id="passwordInput" placeholder="Masukkan password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPasswordInput">Konfirmasi Password</label>
+                <input name="confirmPassword" type="password" class="form-control" id="confirmPasswordInput"
+                    placeholder="Masukkan ulang password" required>
+            </div>
+
+            <button type="submit" class="btn btn-info">Daftar</button>
+        </form>
+        <div>
+            <p> </p>
+            <p>Sudah memiliki akun?</p>
+            <a class="btn btn-danger" href="/users/login">Masuk</a>
+        </div>
+    </div>
+</div>

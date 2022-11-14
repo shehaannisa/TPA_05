@@ -1,0 +1,16 @@
+<div class="card card-body">
+    {{#if message}}
+    <div class="alert {{messageClass}}" role="alert">
+        {{message}}
+    </div>
+    {{/if}}
+    <h3>Detail Task - Todo</h3>
+    {{#each todos}}
+    <label for="title"><strong><u>Kegiatan / Task : </u></strong></label>
+    <label>{{ title }}</label>
+    <label for="descTask"><strong><u>Deskripsi Kegiatan : </u></strong></label>
+    <label>{{ descTask }}</label>
+    <label for="dueDate"><strong><u>Deadline :</u></strong></label>
+    <label>{{ dueDate }}</label>
+    {{/each}}
+</div>
