@@ -1,4 +1,4 @@
 module.exports = {
     port: '3000',
-    dbURI: 'mongodb+srv://shehaannisa:0UQcp56haWoEkKWH@cluster0.enmheze.mongodb.net/todo-app?retryWrites=true&w=majority'
+    dbURI: 'mongodb://mongo:MrxpHOOqkvg5lxAb2z9Z@containers-us-west-121.railway.app:5776'
 }
